@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Boleto</title>
+    <link rel="stylesheet" href="gerador.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="esquerda">
+                <img src="src/icons/logo.png" alt="Logo da Sua Empresa" style="width: 70px;">
+                <img src="src/img/butterflying.png" alt="nome img" style="width: 300px;">
+            </div>
+            <a href="home.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                <path fill-rule="evenodd"
+                  d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+              </svg></a>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card main-card">
+                <div class="infos">
+                    <br>
+                    <br>
+                    <h6>Valor de Pagamento <br>R$72,00 <img src="src/icons/pix.jpg" alt=""></h6>
+                    <p id="textoCopiavel">Chave Pix:000.000.000.00</p>
+                    APÓS PAGAR DEIXE SUAS INFORMAÇÕES ABAIXO PARA GENTE CONFERIR SE OUVE PAGAMENTO.
+                    APÓS COMFIRMAÇÃO DE PAGAMENTO ENTRAREMOS EM CONTATO COM VOCÊ PARA DISPONIBILIZAR OS RECURSOS!         
+                    <P></P>
+                    <br>
+                    <script>
+                        document.getElementById("textoCopiavel").addEventListener("click", function () {
+                            var texto = document.getElementById("textoCopiavel").innerText;
+                            navigator.clipboard.writeText(texto)
+                                .then(function () {
+                                    alert("Texto copiado com sucesso!");
+                                })
+                                .catch(function () {
+                                    alert("Erro ao copiar texto.");
+                                });
+                        });
+                    </script>
+
+                    <form action="#" method="post">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required>
+
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <input type="submit" value="Comfirmar Pagamento">
+                    </form>
+                    
+                    <div class="imagem">
+                        <a
+                            href="https://www.google.com.br/maps/place/SOS+Alergia+Mar%C3%ADlia/@-22.2165652,-49.9507613,13z/data=!4m7!3m6!1s0x94bfd7391fd45c7d:0xcce9303db177f95e!8m2!3d-22.2195512!4d-49.9504722!15sCiNNYXLDrWxpYSBTUCBSdWEgWFYgZGUgZGV6ZW1icm8sIDQ1OJIBD2J1c2luZXNzX2NlbnRlcuABAA!16s%2Fg%2F11g6vkc_nk!5m1!1e1?entry=ttu">
+                    </div>
+                    </a>
+                </div>
+                <div class="img">
+                    <img height="700px" width="700px" src="src/img/celularpix.png" alt="" class="card-image">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
